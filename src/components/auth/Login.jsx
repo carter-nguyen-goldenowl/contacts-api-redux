@@ -2,14 +2,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { login } from "../../store/actions/userActions";
+import { Sigin } from "../../store/actions/userActions";
 
 export default function Login() {
     const dispatch = useDispatch();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const listuser = useSelector(state => state.user.listuser);
 
     const handleSubmitLogin = (e) => {
         
@@ -18,8 +17,8 @@ export default function Login() {
         const user = {
             email: email,
             password: password,
-        }
-        dispatch(login(user));
+        } 
+        dispatch(Sigin(user));
     }
 
     return(

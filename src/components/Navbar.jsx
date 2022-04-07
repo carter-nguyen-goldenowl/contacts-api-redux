@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { logout } from "../store/actions/userActions";
+import { Logout } from "../store/actions/userActions";
 export default function Navbar(){
 
   const dispatch = useDispatch();
@@ -8,7 +8,7 @@ export default function Navbar(){
   const logoutSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(logout());
+    dispatch(Logout());
   }
 
   var authUl = "";

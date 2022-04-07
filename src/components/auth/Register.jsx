@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { register } from "../../store/actions/userActions";
+import { Sigup } from "../../store/actions/userActions";
 export default function Register () {
 
     const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export default function Register () {
             password: password,
             confirm_password: confirmpassword,
         }
-        dispatch(register(user));
+        dispatch(Sigup(user));
     }
     return(
            <section className="h-screen">

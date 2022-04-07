@@ -1,8 +1,9 @@
 import axios from "axios";
 import typeActions from "../contants/typeActions";
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 
-export const login = (user) => {
+export const Sigin = (user) => {
     return async (dispatch) => {
         try {
             await axios.post("/api/login", user).then((res) => {
@@ -25,7 +26,7 @@ export const login = (user) => {
     };
 };
 
-export const register = (user) => {
+export const Sigup = (user) => {
     return async (dispatch) => {
         try {
             await axios.post("/api/register", user).then((res) => {
@@ -49,7 +50,7 @@ export const register = (user) => {
     };
 };
 
-export const logout = () => {
+export const Logout = () => {
     return async (dispatch) => {
         try {
             await axios.post("/api/logout").then((res) => {
